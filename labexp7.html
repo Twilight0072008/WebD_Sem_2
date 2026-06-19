@@ -1,102 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Registration Form</title>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background-color: #d0d0d0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 30px;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    .card {
-      background-color: white;
-      border-radius: 16px;
-      padding: 50px 50px 30px 50px;
-      width: 480px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    body{
+      background-color:#d0d0d0;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      padding:30px;
+      font-family:Arial,sans-serif;
     }
 
-    h1 {
-      font-size: 30px;
-      font-weight: 900;
-      color: #111;
-      text-align: center;
-      margin-bottom: 36px;
+    .card{
+      background:white;
+      width:480px;
+      border-radius:16px;
+      padding:50px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
     }
 
-    input {
-      width: 100%;
-      padding: 14px 16px;
-      font-size: 15px;
-      border: 1px solid #bbb;
-      border-radius: 6px;
-      margin-bottom: 20px;
-      outline: none;
-      color: #555;
+    h1{
+      text-align:center;
+      margin-bottom:35px;
     }
 
-    input:focus { border-color: #888; }
-
-    .btn-row {
-      text-align: center;
-      margin-bottom: 30px;
+    input{
+      width:100%;
+      padding:14px;
+      margin-bottom:20px;
+      border:1px solid gray;
+      border-radius:6px;
+      font-size:15px;
     }
 
-    button {
-      background-color: #2e7d32;
-      color: white;
-      border: none;
-      padding: 14px 40px;
-      font-size: 17px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
+    .btn-row{
+      text-align:center;
+      margin-bottom:25px;
     }
 
-    button:hover { background-color: #1b5e20; }
-
-    .my-info {
-      border-top: 1px solid #ddd;
-      padding-top: 16px;
-      text-align: center;
-      font-size: 15px;
-      font-weight: bold;
-      color: #111;
+    button{
+      background:green;
+      color:white;
+      border:none;
+      padding:14px 40px;
+      border-radius:6px;
+      cursor:pointer;
+      font-size:17px;
     }
 
-    .my-info p { margin-bottom: 5px; }
+    button:hover{
+      background:darkgreen;
+    }
+
+    .my-info{
+      text-align:center;
+      border-top:1px solid gray;
+      padding-top:15px;
+      font-weight:bold;
+    }
+
+    #message{
+      text-align:center;
+      margin-top:15px;
+      font-weight:bold;
+      color:green;
+    }
+
   </style>
 </head>
+
 <body>
 
-  <div class="card">
-    <h1>Registration Form</h1>
+<div class="card">
 
-    <input type="text" placeholder="Enter Name" />
-    <input type="email" placeholder="Enter Email" />
-    <input type="password" placeholder="Enter Password" />
+<h1>Registration Form</h1>
 
-    <div class="btn-row">
-      <button>Register</button>
-    </div>
+<input type="text" id="name" placeholder="Enter Name">
 
-    <!-- Your info below -->
-    
-     <div class="my-info">
-      <p>Srishti Gupta</p>
-      <p>ELCE-1</p>
-      <p>2503204000032</p>
-    </div>
+<input type="email" id="email" placeholder="Enter Email">
 
-  </div>
+<input type="password" id="password" placeholder="Enter Password">
+
+<div class="btn-row">
+
+<button onclick="registerUser()">Register</button>
+
+</div>
+
+<p id="message"></p>
+
+<div class="my-info">
+<p>Srishti Gupta</p>
+<p>ELCE-1</p>
+<p>2503204000032</p>
+</div>
+
+</div>
+
+<!-- Internal JavaScript -->
+
+<script>
+
+function registerUser(){
+
+    let name=document.getElementById("name").value;
+    let email=document.getElementById("email").value;
+    let password=document.getElementById("password").value;
+    let message=document.getElementById("message");
+
+    if(name=="" || email=="" || password==""){
+
+        alert("Please fill all the fields.");
+
+        message.innerHTML="Registration Failed!";
+
+    }
+
+    else{
+
+        alert("Registration Successful!");
+
+        message.innerHTML="Welcome " + name + "! Registration Successful.";
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>
