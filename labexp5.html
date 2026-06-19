@@ -1,95 +1,178 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Student Information</title>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background-color: #e8e8e8;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 30px;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    .wrapper {
-      background-color: #e0e0e0;
-      border-radius: 12px;
-      padding: 30px 24px;
-      width: 360px;
+    body{
+      background-color:#e8e8e8;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      padding:30px;
+      font-family:Arial,sans-serif;
     }
 
-    h1 {
-      font-size: 26px;
-      font-weight: 900;
-      color: #111;
-      text-align: center;
-      margin-bottom: 24px;
+    .wrapper{
+      background-color:#e0e0e0;
+      border-radius:12px;
+      padding:30px 24px;
+      width:360px;
     }
 
-    .card {
-      background-color: white;
-      border-radius: 14px;
-      padding: 24px 20px;
-      text-align: center;
-      margin-bottom: 16px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    h1{
+      text-align:center;
+      margin-bottom:24px;
     }
 
-    .card:last-child {
-      margin-bottom: 0;
+    .card{
+      background:white;
+      border-radius:12px;
+      padding:20px;
+      text-align:center;
+      margin-bottom:16px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
     }
 
-    .card h2 {
-      font-size: 20px;
-      font-weight: 800;
-      color: #111;
-      margin-bottom: 10px;
+    .card h2{
+      margin-bottom:10px;
     }
 
-    .card p {
-      font-size: 14px;
-      color: #333;
-      margin-bottom: 6px;
+    .card p{
+      margin-bottom:6px;
     }
+
+    button{
+      margin-top:12px;
+      padding:8px 16px;
+      background-color:blue;
+      color:white;
+      border:none;
+      border-radius:5px;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background-color:darkblue;
+    }
+
+    .my-info{
+      text-align:center;
+      margin-top:20px;
+      font-weight:bold;
+    }
+
   </style>
+
 </head>
+
 <body>
 
-  <div class="wrapper">
-    <h1>Student Information</h1>
+<div class="wrapper">
 
-    <div class="card">
-      <h2>Srishti Gupta</h2>
-      <p>Course: Mechanical Engineering</p>
-      <p>Marks: 85</p>
-    </div>
+<h1>Student Information</h1>
 
-    <div class="card">
-      <h2>SHRISTI GUPTA</h2>
-      <p>Course: Information Technology</p>
-      <p>Marks: 92</p>
-    </div>
+<div class="card">
 
-    <div class="card">
-      <h2>SAKSHI SHARMA</h2>
-      <p>Course: Electronics</p>
-      <p>Marks: 78</p>
+<h2>Srishti Gupta</h2>
 
+<p>Course: Mechanical Engineering</p>
 
-    </div>
+<p>Marks: 85</p>
 
-  
- <div class="my-info">
-    <p>Srishti Gupta</p>
-    <p>ELCE-1</p>
-    <p>2503204000032</p>
-  </div>
+<button onclick="showStudent('Srishti Gupta','Mechanical Engineering',85)">
+Show Details
+</button>
 
-  </div>
+</div>
+
+<div class="card">
+
+<h2>SHRISTI GUPTA</h2>
+
+<p>Course: Information Technology</p>
+
+<p>Marks: 92</p>
+
+<button onclick="showStudent('Shristi Gupta','Information Technology',92)">
+Show Details
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>SAKSHI SHARMA</h2>
+
+<p>Course: Electronics</p>
+
+<p>Marks: 78</p>
+
+<button onclick="showStudent('Sakshi Sharma','Electronics',78)">
+Show Details
+</button>
+
+</div>
+
+<div class="my-info">
+<p>Srishti Gupta</p>
+<p>ELCE-1</p>
+<p>2503204000032</p>
+</div>
+
+</div>
+
+<!-- Internal JavaScript -->
+
+<script>
+
+function showStudent(name, course, marks){
+
+    if(marks>=90){
+
+        alert(
+        "Name : "+name+
+        "\nCourse : "+course+
+        "\nMarks : "+marks+
+        "\nGrade : A+"
+        );
+
+    }
+
+    else if(marks>=80){
+
+        alert(
+        "Name : "+name+
+        "\nCourse : "+course+
+        "\nMarks : "+marks+
+        "\nGrade : A"
+        );
+
+    }
+
+    else{
+
+        alert(
+        "Name : "+name+
+        "\nCourse : "+course+
+        "\nMarks : "+marks+
+        "\nGrade : B"
+        );
+
+    }
+
+}
+
+</script>
+
 </body>
 </html>
