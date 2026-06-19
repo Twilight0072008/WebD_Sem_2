@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TechStore</title>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: Arial, sans-serif;
@@ -27,7 +32,6 @@
     nav .logo {
       font-size: 20px;
       font-weight: bold;
-      color: white;
     }
 
     nav ul {
@@ -39,156 +43,198 @@
     nav ul li a {
       color: white;
       text-decoration: none;
-      font-size: 15px;
     }
 
-    nav ul li a:hover { text-decoration: underline; }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
 
     main {
       flex: 1;
-      padding: 40px 60px;
+      padding: 40px;
     }
 
     .product-grid {
       display: flex;
-      gap: 28px;
       justify-content: center;
+      gap: 25px;
       flex-wrap: wrap;
     }
 
     .card {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 24px;
       width: 300px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      background: white;
+      border: 1px solid lightgray;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
     }
 
     .card img {
       width: 100%;
       height: 200px;
       object-fit: contain;
-      margin-bottom: 16px;
     }
 
     .card h2 {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 6px;
+      margin: 15px 0 8px;
     }
 
     .card p {
-      font-size: 14px;
-      color: #555;
+      color: gray;
       margin-bottom: 12px;
     }
 
     .price-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 16px;
+      margin-bottom: 15px;
     }
 
     .price {
-      font-size: 16px;
       font-weight: bold;
-      color: #111;
+      font-size: 18px;
     }
 
     .badge {
-      padding: 3px 10px;
+      padding: 4px 10px;
       border-radius: 4px;
-      font-size: 12px;
-      font-weight: bold;
       color: white;
+      font-size: 12px;
+      margin-left: 10px;
     }
 
-    .badge.new { background-color: #28a745; }
-    .badge.sale { background-color: #dc3545; }
+    .new {
+      background: green;
+    }
+
+    .sale {
+      background: red;
+    }
 
     .btn {
-      background-color: #007bff;
+      background: blue;
       color: white;
       border: none;
-      padding: 10px 22px;
-      border-radius: 5px;
-      font-size: 14px;
+      padding: 10px 20px;
       cursor: pointer;
+      border-radius: 5px;
     }
 
-    .btn:hover { background-color: #0056b3; }
+    .btn:hover {
+      background: darkblue;
+    }
 
     footer {
-      background-color: #1a1a2e;
-      color: #ccc;
+      background: #1a1a2e;
+      color: white;
       text-align: center;
-      padding: 18px;
-      font-size: 14px;
+      padding: 15px;
     }
   </style>
 </head>
+
 <body>
 
-  <nav>
-    <div class="logo">TechStore</div>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+<nav>
+  <div class="logo">TechStore</div>
 
-  <main>
-    <div class="product-grid">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80" alt="Laptop"/>
-        <h2>Laptop</h2>
-        <p>High performance laptop</p>
-        <div class="price-row">
-          <span class="price">₹50,000</span>
-          <span class="badge new">New</span>
-        </div>
-        <button class="btn">View Details</button>
-      </div>
+<main>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?w=400&q=80" alt="Mobile"/>
-        <h2>Mobile</h2>
-        <p>Latest smartphone</p>
-        <div class="price-row">
-          <span class="price">₹30,000</span>
-          <span class="badge sale">Sale</span>
-        </div>
-        <button class="btn">View Details</button>
-      </div>
+<div class="product-grid">
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80" alt="Headphones"/>
-        <h2>Headphones</h2>
-        <p>Noise cancelling</p>
-        <div class="price-row">
-          <span class="price">₹5,000</span>
-          <span class="badge new">New</span>
-        </div>
-        <button class="btn">View Details</button>
-      </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80">
+<h2>Laptop</h2>
+<p>High Performance Laptop</p>
 
-    </div>
-  </main>
+<div class="price-row">
+<span class="price">₹50,000</span>
+<span class="badge new">New</span>
+</div>
 
-  <footer>
-    &copy; 2026 TechStore | Follow us on social media
-  </footer>
+<button class="btn" onclick="showDetails('Laptop')">
+View Details
+</button>
 
-  <h1>Srishti Gupta</h1>
-  <h1>ELCE-1</h1>
-  <h1>2503204000032</h1>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1678685888221-cda773a3dcdb?w=400&q=80">
+<h2>Mobile</h2>
+<p>Latest Smartphone</p>
+
+<div class="price-row">
+<span class="price">₹30,000</span>
+<span class="badge sale">Sale</span>
+</div>
+
+<button class="btn" onclick="showDetails('Mobile')">
+View Details
+</button>
+
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80">
+<h2>Headphones</h2>
+<p>Noise Cancelling</p>
+
+<div class="price-row">
+<span class="price">₹5,000</span>
+<span class="badge new">New</span>
+</div>
+
+<button class="btn" onclick="showDetails('Headphones')">
+View Details
+</button>
+
+</div>
+
+</div>
+
+</main>
+
+<footer>
+© 2026 TechStore | Follow us on Social Media
+</footer>
+
+<h2>Srishti Gupta</h2>
+<h2>ELCE-1</h2>
+<h2>2503204000032</h2>
+
+<!-- Internal JavaScript -->
+<script>
+
+function showDetails(product){
+
+    if(product=="Laptop"){
+
+        alert("Laptop\n\nPrice : ₹50,000\nProcessor : Intel Core i7\nRAM : 16GB\nStorage : 512GB SSD");
+
+    }
+
+    else if(product=="Mobile"){
+
+        alert("Mobile\n\nPrice : ₹30,000\nRAM : 8GB\nStorage : 128GB\nCamera : 50MP");
+
+    }
+
+    else if(product=="Headphones"){
+
+        alert("Headphones\n\nPrice : ₹5,000\nBluetooth : 5.3\nBattery : 30 Hours\nNoise Cancelling");
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>
